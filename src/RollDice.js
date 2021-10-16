@@ -40,10 +40,11 @@ class RollDice extends Component {
         return (
             <div className='RollDice'>
                 <div>
-                    <Die face={die1} />
-                    <Die face={die2} />
+                    <Die face={die1} isRolling={isRolling} />
+                    <Die face={die2} isRolling={isRolling} />
                 </div>
-                <button onClick={this.rollDice} disabled = {isRolling ? true : false}>
+                <button onClick={this.rollDice} 
+                    disabled = {isRolling ? true : false}>
                     {isRolling ? 'Rolling...' : 'Roll Dice!'}
                 </button>
 

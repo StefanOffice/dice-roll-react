@@ -3,9 +3,10 @@ import './Die.css';
 
 class Die extends Component {
     render(){
-        const { face } = this.props;
+        const { face, isRolling } = this.props;
+        const animation = isRolling ? 'wobbleDice' : ''; 
         return (
-            <i class={`Die fas fa-dice-${face}`}></i>
+            <i class={`Die fas fa-dice-${face} ${animation}`}></i>
         )
     }
 }
